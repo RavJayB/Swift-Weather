@@ -44,7 +44,7 @@ class WeatherMapPlaceViewModel: ObservableObject {
 
         // write code for this function with suitable comments
 //        https://api.openweathermap.org/data/3.0/onecall?lat=50&lon=50&units=metric&appid=19002a6736dce98b2d635896cd45fd2d
-        guard let url = URL(string: "https://api.openweathermap.org/data/3.0/onecall?lat=\(lat)&lon=\(lon)&units=metric&appid={add your You API key here}") else {
+        guard let url = URL(string: "https://api.openweathermap.org/data/3.0/onecall?lat=\(lat)&lon=\(lon)&units=metric&appid=76126939a6ad54f54c8f9d2885ef2c04") else {
             print("Invalid url")
             return
         }
@@ -88,7 +88,7 @@ class WeatherMapPlaceViewModel: ObservableObject {
             }
 
             // Fetch city data (lat/lon and basic weather)
-            let cityWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&units=metric&appid={add your You API key here}"
+            let cityWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&units=metric&appid=abf43cc8723ddd7452dcf385016ad642"
             guard let url = URL(string: cityWeatherURL) else {
                 errorMessage = "Invalid URL for city weather data."
                 return
